@@ -2,7 +2,7 @@
 
 Myst is a markup text format that tries to marry the extensibility and strong semantic markup properties of reStructuredText with some features of Markdown that the Myst authors have found extremely convenient in practice. It should be easy to pick up for users of either language.
 
-The syntax choices of Myst are such that many relatively simple Markdown or reST files will be automatically compliaint Myst documents. For example, Markdown documents with no raw HTML and reST ones whose choice of header markers matches the Myst spec, will automatically be valid Myst.
+The syntax choices of Myst are such that many relatively simple Markdown or reST files will be automatically compliant Myst documents. For example, Markdown documents with no raw HTML and reST ones whose choice of header markers matches the Myst spec, will automatically be valid Myst.
 
 
 ## Features
@@ -29,14 +29,15 @@ A few areas of reST have been restricted:
 
 ### Additions from Markdown 
 
-* Markdown link syntax (`[My site](http://example.com)`) is supported, with the addition that extra attributes can be passed in an optional `{}` block:
+* Markdown link syntax, `[My site](http://example.com)`, is supported, with the addition that extra attributes can be passed in an optional `{}` block:
 
 ```
 {target=_blank rel=external}[My site](http://example.com)
+
+[My site](http://example.com){target=_blank rel=external}
 ```
 
 * Triple-backticks blocks with optional language header for source code blocks (from Github-flavored Markdown)
-
 
 ### Other features
 
@@ -46,6 +47,8 @@ A few areas of reST have been restricted:
 
 ```
 !{width=80% height=50%}[My logo](fig/logo.png)
+
+![My logo](fig/logo.png){width=80% height=50%}
 ```
 
 
