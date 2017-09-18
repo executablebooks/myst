@@ -9,21 +9,24 @@ The syntax choices of Myst are such that many relatively simple Markdown or reST
 
 ### From the perspective of reST
 
-A few areas of reST have been restricted:
+A few areas of reST have been restricted or modified:
 
-* ATX-style headers as in markdown is preferred.  Only for titles/subtitles should overline/underline headers (see below) be used.
-
-* Underline/overline headers are still allowed for ease of integration, but they are discouraged (other than for ) and the interpretation of the level markers is hardcoded. Only the following are allowed:
+* Underline/overline headers are used for a few semantic roles that don't really exist in Markdown (which maps purely to H1..H6 HTML levels): document title, subtitle and parts.  These are mapped in html to H1, H2 and H3 respectively, but with additional class attributes to support custom styling:
 
     - `=` with overline, for the document title (maps to `<h1 class="title">` and a `<title>` tag is also emitted)
     - `-` with overline, for the document subtitle (maps to `<h2 class="subtitle">`)
     - `#` with overline, for parts (maps to `<h3 class="part">`)
+
+* For other heading levels, ATX-style headers as in markdown is preferred. Setext headers are still supported for backwards compatibility with reST, but with a fixed interpretation of the levels, as follows::
+
     - `*` with overline, for chapters (maps to `<h1 class="chapter">`)
     - `=`, for sections (maps to `<h2 class="section">`)
     - `-`, for subsections (maps to `<h3 class="subsection">`)
     - `^`, for subsubsections (maps to `<h4 class="subsubsection">`)
     - `"`, for paragraphs (maps to `<h5 class="paragraph">`)
     - `'`, for paragraphs (maps to `<h6 class="paragraph">`)
+
+* For ATX headers, the above six levels correspond to `#` ... `######`.
 
 * Single-backticks inline are *always* interepreted as preformatted (code) text. This is equivalent to saying that the default role has been hardcoded to be code.
 
@@ -32,8 +35,12 @@ A few areas of reST have been restricted:
 * Markdown link syntax, `[My site](http://example.com)`, is supported, with the addition that extra attributes can be passed in an optional `{}` block:
 
 ```
-{target=_blank rel=external}[My site](http://example.com)
+[My site](http://example.com)
+```
 
+or, for additional attributes:
+
+```
 [My site](http://example.com){target=_blank rel=external}
 ```
 
@@ -46,11 +53,14 @@ A few areas of reST have been restricted:
 * For images, the markdown syntax is supported with one addition: extra arguments can be passed via `{}`:
 
 ```
-!{width=80% height=50%}[My logo](fig/logo.png)
-
-![My logo](fig/logo.png){width=80% height=50%}
+![My logo](fig/logo.png)
 ```
 
+or, for additional attributes:
+
+```
+![My logo](fig/logo.png){width=80% height=50%}
+```
 
 ## License
 
