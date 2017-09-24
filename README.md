@@ -42,7 +42,7 @@ A few areas of reST have been restricted or modified:
 
 ### Other features
 
-* The dollarmath sphinx extension is built-in, supporting LaTeX math between single-dollar signs for inline math. For displayed math, using `.. math::` is still recommended, as it isn't that much more typing and it allows for additional information such as labels to be passed.
+* Supports LaTeX math between single-dollar signs for inline math (e.g., [math_dollar.py](https://github.com/matthew-brett/texext/blob/master/texext/math_dollar.py)). For displayed math, using `.. math::` is still recommended, as it isn't that much more typing and it allows for additional information such as labels to be passed.
 
 * For images, the markdown syntax is supported:
 
