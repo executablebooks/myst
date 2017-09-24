@@ -11,13 +11,13 @@ The syntax choices of Myst are such that many relatively simple Markdown or reST
 
 A few areas of reST have been restricted or modified:
 
-* Setext headers are **only** recommended for a few semantic roles that don't really exist in Markdown (which maps purely to H1..H6 HTML levels): document title, subtitle and parts.  These are mapped in html to H1, H2 and H3 respectively, but with additional class attributes to support custom styling:
+* [Setext headers](https://github.github.com/gfm/#setext-headings) are **only** recommended for a few semantic roles that don't really exist in Markdown (which maps purely to H1..H6 HTML levels): document title, subtitle and parts.  These are mapped in html to H1, H2 and H3 respectively, but with additional class attributes to support custom styling:
 
     - `=` with overline, for the document title (maps to `<h1 class="title">` and a `<title>` tag is also emitted)
     - `-` with overline, for the document subtitle (maps to `<h2 class="subtitle">`)
     - `#` with overline, for parts (maps to `<h3 class="part">`)
 
-* For other heading levels, ATX headers are used. Setext headers are allowed for backwards compatibility with reST, but with a fixed interpretation of the levels, as follows (this is the convention used in the [Python documentation guide](https://docs.python.org/devguide/documenting.html#sections)):
+* For other heading levels, [ATX headers](https://github.github.com/gfm/#atx-heading) are used. Setext headers are allowed for backwards compatibility with reST, but with a fixed interpretation of the levels, as follows (this is the convention used in the [Python documentation guide](https://docs.python.org/devguide/documenting.html#sections)):
 
     - `*` with overline, for chapters (maps to `<h1 class="chapter">`)
     - `=`, for sections (maps to `<h2 class="section">`)
