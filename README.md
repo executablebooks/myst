@@ -28,7 +28,7 @@ A few areas of reST have been restricted or modified:
 
 * For ATX headers, the above six levels correspond to `#` ... `######`.
 
-* Single-backticks inline are *always* interepreted as preformatted (code) text. This is equivalent to saying that the default role has been hardcoded to be code.
+* Single-backticks inline are *always* interpreted as preformatted (code) text. This is equivalent to saying that the default role has been hardcoded to be code.
 
 ### Additions from Markdown 
 
@@ -38,11 +38,11 @@ A few areas of reST have been restricted or modified:
 [My site](http://example.com){target=_blank rel=external}
 ```
 
-* Triple-backticks blocks with optional language header for source code blocks (from Github-flavored Markdown)
+* Triple-backticks blocks with optional language header for source code blocks (from GitHub-flavored Markdown)
 
 ### Other features
 
-* The dollarmath sphinx extension is built-in, supporting LaTeX math between single-dollar signs for inline math. For displayed math, using `.. math::` is still recommended, as it isn't that much more typing and it allows for additional infromation such as labels to be passed.
+* The dollarmath sphinx extension is built-in, supporting LaTeX math between single-dollar signs for inline math. For displayed math, using `.. math::` is still recommended, as it isn't that much more typing and it allows for additional information such as labels to be passed.
 
 * For images, the markdown syntax is supported:
 
