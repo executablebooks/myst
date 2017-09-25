@@ -1,5 +1,5 @@
 # Myst - Markedly Structured Text
- 
+
 Myst is a markup text format that tries to marry the extensibility and strong semantic markup properties of reStructuredText with some features of Markdown that the Myst authors have found extremely convenient in practice. It should be easy to pick up for users of either language.
 
 The syntax choices of Myst are such that many relatively simple Markdown or reST files will be automatically compliant Myst documents. For example, Markdown documents with no raw HTML and reST ones whose choice of header markers matches the Myst spec, will automatically be valid Myst.
@@ -11,26 +11,13 @@ The syntax choices of Myst are such that many relatively simple Markdown or reST
 
 A few areas of reST have been restricted or modified:
 
-* Setext headers are **only** recommended for a few semantic roles that don't really exist in Markdown (which maps purely to H1..H6 HTML levels): document title, subtitle and parts.  These are mapped in html to H1, H2 and H3 respectively, but with additional class attributes to support custom styling:
+* Only ATX (#-style) headings are used.  The different levels, `#` through `######`, map to `h1` through `h6`.
 
-    - `=` with overline, for the document title (maps to `<h1 class="title">` and a `<title>` tag is also emitted)
-    - `-` with overline, for the document subtitle (maps to `<h2 class="subtitle">`)
-    - `#` with overline, for parts (maps to `<h3 class="part">`)
-
-* For other heading levels, ATX headers are used. Setext headers are allowed for backwards compatibility with reST, but with a fixed interpretation of the levels, as follows (this is the convention used in the [Python documentation guide](https://docs.python.org/devguide/documenting.html#sections)):
-
-    - `*` with overline, for chapters (maps to `<h1 class="chapter">`)
-    - `=`, for sections (maps to `<h2 class="section">`)
-    - `-`, for subsections (maps to `<h3 class="subsection">`)
-    - `^`, for subsubsections (maps to `<h4 class="subsubsection">`)
-    - `"`, for paragraphs (maps to `<h5 class="paragraph">`)
-    - `'`, for paragraphs (maps to `<h6 class="paragraph">`)
-
-* For ATX headers, the above six levels correspond to `#` ... `######`.
+* Braces can be used to specify additional class attributes on a heading, e.g., `# Name of my Book {.title}` maps to `<h1 class="title">`.  By default, at least `title`, `subtitle`, and `chapter` are supported.
 
 * Single-backticks inline are *always* interpreted as preformatted (code) text. This is equivalent to saying that the default role has been hardcoded to be code.
 
-### Additions from Markdown 
+### Additions from Markdown
 
 * Markdown link syntax, `[My site](http://example.com)`, is supported, with the addition that extra attributes can be passed in an optional `{}` block:
 
