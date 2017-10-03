@@ -4,6 +4,7 @@ Myst is a markup text format that tries to marry the extensibility and strong se
 
 The syntax choices of Myst are such that many relatively simple Markdown or reST files will be automatically compliant Myst documents. For example, Markdown documents with no raw HTML and reST ones whose choice of header markers matches the Myst spec, will automatically be valid Myst.
 
+**Note:** there's an implementation of [reStructuredText in JavaScript](https://www.npmjs.com/package/restructured) that includes an [online demo](https://seikichi.github.io/restructured), it could be useful as a reference for client-side tooling.
 
 ## Features
 
