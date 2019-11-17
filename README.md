@@ -1,5 +1,7 @@
 # Myst - Markedly Structured Text
- 
+
+*Note: This is a proof-of-concept repository to discuss extending rST to behave more like Markdown in some cases, it's meant for brainstorming and discussing, and should not be treated as a final plan or commitment!*
+
 Myst is a markup text format that tries to marry the extensibility and strong semantic markup properties of reStructuredText with some features of Markdown that the Myst authors have found extremely convenient in practice. It should be easy to pick up for users of either language.
 
 The syntax choices of Myst are such that many relatively simple Markdown or reST files will be automatically compliant Myst documents. For example, Markdown documents with no raw HTML and reST ones whose choice of header markers matches the Myst spec, will automatically be valid Myst.
