@@ -43,6 +43,10 @@ A few areas of reST have been restricted or modified:
 
 * Triple-backticks blocks with optional language header for source code blocks (from GitHub-flavored Markdown)
 
+  ```{r}
+  x<-seq(1, 10)
+  ```
+
 ### Other features
 
 * Supports LaTeX math between single-dollar signs for inline math (e.g., [math_dollar.py](https://github.com/matthew-brett/texext/blob/master/texext/math_dollar.py)). For displayed math, using `.. math::` is still recommended, as it isn't that much more typing and it allows for additional information such as labels to be passed.
